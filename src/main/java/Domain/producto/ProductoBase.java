@@ -13,7 +13,7 @@ import java.util.List;
 @Getter
 public class ProductoBase {
     private String nombre;
-    private Integer precioBase;
+    private Double precioBase;
     private String descripcion;
     private LocalTime tiempoDeFabricacion;
     private List<AreaDePersonalizacion> areasDePersonalizacion;
