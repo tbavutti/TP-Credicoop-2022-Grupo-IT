@@ -19,6 +19,7 @@ public class Tienda {
 
     public Tienda(){
         this.publicaciones = new ArrayList<>();
+        this.mediosDePago = new ArrayList<>();
     }
 
     public void agregarPublicacion(Publicacion publicacion){
