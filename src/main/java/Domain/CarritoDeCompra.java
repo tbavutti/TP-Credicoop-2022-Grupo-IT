@@ -19,5 +19,4 @@ public class CarritoDeCompra {
     public void agregarProducto(Publicacion producto){
         this.productos.add(producto);
     }
-
 }
