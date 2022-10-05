@@ -1,17 +1,23 @@
 package Domain.producto;
 
+import Domain.Persistente;
+import Domain.personalizacion.Personalizacion;
 import lombok.Getter;
 import lombok.Setter;
-import retrofit2.http.GET;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.DoubleStream;
+import javax.persistence.*;
 
 @Setter
 @Getter
-public class ProductoPersonalizado {
+@Entity
+@Table(name = "producto_personalizado")
+public class ProductoPersonalizado extends Persistente {
+
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "producto_id", referencedColumnName = "id")
     private ProductoBase producto;
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "personalizacion_id", referencedColumnName = "id")
     private Personalizacion personalizacion;
 
 

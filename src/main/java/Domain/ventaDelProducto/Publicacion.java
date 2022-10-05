@@ -1,4 +1,4 @@
-package Domain;
+package Domain.ventaDelProducto;
 
 import Domain.estado.Estado;
 import Domain.estado.TipoDeEstado;

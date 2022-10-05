@@ -1,6 +1,6 @@
 package Domain.estado;
 
-import Domain.Publicacion;
+import Domain.ventaDelProducto.Publicacion;
 import lombok.Getter;
 import lombok.Setter;
 

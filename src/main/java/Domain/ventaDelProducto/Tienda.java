@@ -1,7 +1,7 @@
-package Domain;
+package Domain.ventaDelProducto;
 
-import Domain.estado.Estado;
-import Domain.estado.TipoDeEstado;
+import Domain.ventaDelProducto.MedioDePago;
+import Domain.ventaDelProducto.Publicacion;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -26,15 +26,5 @@ public class Tienda {
         this.publicaciones.add(publicacion);
     }
 
-    public void publicar(Publicacion publicacion){
-        //TODO publicacion.setEstadoActual(TipoDeEstado.EN_CURSO);
-    }
 
-    public void pausar(){
-        //TODO
-    }
-
-    public void cancelar(){
-        //TODO
-    }
 }

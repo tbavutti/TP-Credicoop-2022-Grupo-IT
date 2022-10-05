@@ -1,4 +1,4 @@
-package Domain;
+package Domain.ventaDelProducto;
 
 import lombok.Getter;
 import lombok.Setter;

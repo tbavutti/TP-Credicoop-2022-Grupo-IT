@@ -1,4 +1,4 @@
-package Domain;
+package Domain.ventaDelProducto;
 
 public interface MedioDePago {
 

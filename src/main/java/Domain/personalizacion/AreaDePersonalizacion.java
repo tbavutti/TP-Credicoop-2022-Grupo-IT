@@ -1,15 +1,23 @@
-package Domain.producto;
+package Domain.personalizacion;
 
+import Domain.Persistente;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
 @Setter
 @Getter
-public class AreaDePersonalizacion {
+@Entity
+@Table(name = "area_de_personalizacion")
+public class AreaDePersonalizacion extends Persistente {
+
+    @Column
     private String nombre;
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "area_de_personalizacion_id", referencedColumnName = "id")
     private List<TipoDePersonalizacion> tiposDePersonalizacion;
 
     public AreaDePersonalizacion(){
@@ -23,4 +31,6 @@ public class AreaDePersonalizacion {
     public void eliminarTipoDePersonalizacion(TipoDePersonalizacion tipoDePersonalizacion){
         this.tiposDePersonalizacion.remove(tipoDePersonalizacion);
     }
+
+
 }
