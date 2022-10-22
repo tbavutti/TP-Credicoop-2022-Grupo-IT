@@ -1,7 +1,7 @@
-package Domain.producto;
+package model.producto;
 
-import Domain.Persistente;
-import Domain.personalizacion.Personalizacion;
+import persistencia.Persistente;
+import model.personalizacion.Personalizacion;
 import lombok.Getter;
 import lombok.Setter;
 

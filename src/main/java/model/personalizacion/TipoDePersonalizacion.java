@@ -1,8 +1,7 @@
-package Domain.personalizacion;
+package model.personalizacion;
 
 
-import Domain.Persistente;
-import lombok.EqualsAndHashCode;
+import persistencia.Persistente;
 import lombok.Getter;
 import lombok.Setter;
 

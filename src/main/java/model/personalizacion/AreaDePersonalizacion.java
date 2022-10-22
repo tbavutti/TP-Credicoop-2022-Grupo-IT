@@ -1,6 +1,6 @@
-package Domain.personalizacion;
+package model.personalizacion;
 
-import Domain.Persistente;
+import persistencia.Persistente;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -14,8 +14,9 @@ import java.util.List;
 @Table(name = "area_de_personalizacion")
 public class AreaDePersonalizacion extends Persistente {
 
-    @Column
+    @Column(name = "nombre")
     private String nombre;
+
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "area_de_personalizacion_id", referencedColumnName = "id")
     private List<TipoDePersonalizacion> tiposDePersonalizacion;
@@ -31,6 +32,5 @@ public class AreaDePersonalizacion extends Persistente {
     public void eliminarTipoDePersonalizacion(TipoDePersonalizacion tipoDePersonalizacion){
         this.tiposDePersonalizacion.remove(tipoDePersonalizacion);
     }
-
 
 }

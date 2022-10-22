@@ -1,8 +1,8 @@
-package Domain.producto;
+package model.producto;
 
 
-import Domain.Persistente;
-import Domain.personalizacion.AreaDePersonalizacion;
+import persistencia.Persistente;
+import model.personalizacion.AreaDePersonalizacion;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,15 +17,15 @@ import java.util.List;
 @Table(name = "producto")
 public class ProductoBase extends Persistente {
 
-    @Column
+    @Column(name = "nombre")
     private String nombre;
-    @Column
+    @Column(name= "precio_base")
     private Double precioBase;
-    @Column
+    @Column(name = "descripcion")
     private String descripcion;
-    @Column(columnDefinition= "DATE")
-    private LocalTime tiempoDeFabricacion;
-    @OneToMany(cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
+    @Column(name="tiempo_de_fabricacion")
+    private Integer tiempoDeFabricacion;
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name="producto_id", referencedColumnName = "id")
     private List<AreaDePersonalizacion> areasDePersonalizacion;
 

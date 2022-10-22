@@ -1,4 +1,4 @@
-package Domain.personalizacion;
+package model.personalizacion;
 
 
 import lombok.Getter;

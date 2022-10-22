@@ -1,4 +1,7 @@
-package Domain.estado;
+package model.producto.estado;
+
+import javax.persistence.Embeddable;
+
 
 public enum TipoDeEstado {
 

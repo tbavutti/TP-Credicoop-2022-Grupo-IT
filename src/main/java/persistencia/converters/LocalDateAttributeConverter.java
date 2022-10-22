@@ -1,8 +1,7 @@
-package Domain.converters;
+package persistencia.converters;
 
 import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;
-import javax.persistence.MappedSuperclass;
 import java.sql.Date;
 import java.time.LocalDate;
 
