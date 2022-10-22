@@ -1,12 +1,13 @@
-package model.ventas;
+package model.tienda;
 
 import lombok.Getter;
 import lombok.Setter;
 import model.mediosDePago.MedioDePago;
+import model.publicacion.Publicacion;
+import model.ventas.Venta;
 import persistencia.Persistente;
 
 import javax.persistence.*;
-import java.lang.invoke.LambdaConversionException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,6 +16,13 @@ import java.util.List;
 @Entity
 @Table(name = "tienda")
 public class Tienda extends Persistente {
+
+    @Column(name = "razon_social")
+    private String razonSocial;
+
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "tienda")
+    private List<Venta> ventas;
+
     @OneToMany(mappedBy = "tienda",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
     private List<Publicacion> publicaciones;
 

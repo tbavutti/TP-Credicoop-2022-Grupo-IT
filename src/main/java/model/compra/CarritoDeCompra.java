@@ -1,7 +1,8 @@
-package model.ventas;
+package model.compra;
 
 import lombok.Getter;
 import lombok.Setter;
+import model.publicacion.Publicacion;
 
 import java.util.ArrayList;
 import java.util.List;

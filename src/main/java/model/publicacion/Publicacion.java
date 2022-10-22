@@ -1,10 +1,11 @@
-package model.ventas;
+package model.publicacion;
 
 import model.producto.estado.Estado;
 import model.producto.estado.TipoDeEstado;
 import model.producto.ProductoPersonalizado;
 import lombok.Getter;
 import lombok.Setter;
+import model.tienda.Tienda;
 import persistencia.Persistente;
 
 import javax.persistence.*;
@@ -18,6 +19,8 @@ import java.util.List;
 @Table(name = "publicacion")
 public class Publicacion extends Persistente {
 
+    @OneToOne
+    @JoinColumn(name = "id_producto_personalizado",referencedColumnName = "id")
     private ProductoPersonalizado producto;
 
     @ManyToOne(cascade = CascadeType.PERSIST,fetch = FetchType.LAZY)

@@ -13,7 +13,7 @@ import javax.persistence.*;
 @Table(name = "tipo_de_personalizacion")
 public class TipoDePersonalizacion extends Persistente {
 
-    @Column
+    @Column(name = "nombre")
     private String nombre;
 
 

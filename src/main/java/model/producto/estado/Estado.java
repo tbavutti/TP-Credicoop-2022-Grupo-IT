@@ -1,6 +1,6 @@
 package model.producto.estado;
 
-import model.ventas.Publicacion;
+import model.publicacion.Publicacion;
 import lombok.Getter;
 import lombok.Setter;
 import persistencia.Persistente;
